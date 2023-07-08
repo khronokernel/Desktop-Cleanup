@@ -1,0 +1,24 @@
+#!/bin/zsh
+
+CLI_NAME="Desktop-Cleanup"
+CLI_PATH="/usr/local/bin/$CLI_NAME"
+
+LAUNCH_AGENT_NAME="com.khronokernel.desktop-cleanup"
+LAUNCH_AGENT_PATH="/Library/LaunchAgents/$LAUNCH_AGENT_NAME.plist"
+
+CURRENT_USER=$(stat -f "%Su" /dev/console)
+
+# set permissions
+chmod 644 "$LAUNCH_AGENT_PATH"
+chown root:wheel "$LAUNCH_AGENT_PATH"
+chmod 755 "$CLI_PATH"
+chown root:wheel "$CLI_PATH"
+
+# load LaunchAgent
+echo "Loading $LAUNCH_AGENT_NAME LaunchAgent..."
+launchctl bootstrap gui/"$(id -u "$CURRENT_USER")" "$LAUNCH_AGENT_PATH"
+launchctl enable gui/"$(id -u "$CURRENT_USER")"/"$LAUNCH_AGENT_NAME"
+launchctl kickstart -k gui/"$(id -u "$CURRENT_USER")"/"$LAUNCH_AGENT_NAME"
+
+
+

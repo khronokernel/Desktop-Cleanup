@@ -1,0 +1,53 @@
+name: CI - Build
+
+on:
+  push:
+  workflow_dispatch:
+  release:
+    types: [published]
+
+jobs:
+  build:
+    name: Build
+    runs-on: macos-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.11'
+
+      - name: Build Application
+        run: python3 Build.tool
+
+      - name: Upload install package (artifact)
+        uses: actions/upload-artifact@v2
+        with:
+            name: Desktop-Cleanup.pkg
+            path: build/Desktop-Cleanup.pkg
+
+      - name: Upload uninstall package (artifact)
+        uses: actions/upload-artifact@v2
+        with:
+            name: Desktop-Cleanup-Uninstall.pkg
+            path: build/Desktop-Cleanup-Uninstall.pkg
+
+      - name: Upload install package (on release)
+        if: github.event_name == 'release'
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: Desktop-Cleanup.pkg
+          tag: ${{ github.ref }}
+          file_glob: true
+
+      - name: Upload uninstall package (on release)
+        if: github.event_name == 'release'
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: Desktop-Cleanup-Uninstall.pkg
+          tag: ${{ github.ref }}
+          file_glob: true
