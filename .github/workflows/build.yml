@@ -39,7 +39,7 @@ jobs:
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: Desktop-Cleanup.pkg
+          file: build/Desktop-Cleanup.pkg
           tag: ${{ github.ref }}
 
       - name: Upload uninstall package (on release)
@@ -47,5 +47,5 @@ jobs:
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: Desktop-Cleanup-Uninstall.pkg
+          file: build/Desktop-Cleanup-Uninstall.pkg
           tag: ${{ github.ref }}
