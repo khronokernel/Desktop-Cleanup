@@ -9,7 +9,7 @@
 /*
     Goal of this application is simple:
     - Every time it is run, check for old screenshots
-    - If there are more than 14 screenshots on the desktop, move them to a folder called "Old Screenshots"
+    - If there are more than 14 screenshots on the desktop, move old ones to "~/Old Screenshots"
 */
 
 import Foundation
