@@ -1,6 +1,6 @@
 # Desktop Cleanup
 
-Simple Swift Project with 1 goal: Clean up my desktop of screenshots
+Simple Swift Project with 1 goal: Clean desktop of old screenshots.
 
 * Supports both `x86_64` and `arm64`, macOS 10.13+.
 * Runs once every 3 hours

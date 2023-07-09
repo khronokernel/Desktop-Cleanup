@@ -14,7 +14,7 @@
 
 import Foundation
 
-let APPLICATION_VERSION = "1.0.0"
+let APPLICATION_VERSION = "1.0.1"
 var images_to_keep = 14
 
 print("Desktop Cleanup v\(APPLICATION_VERSION)")
