@@ -41,7 +41,6 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: Desktop-Cleanup.pkg
           tag: ${{ github.ref }}
-          file_glob: true
 
       - name: Upload uninstall package (on release)
         if: github.event_name == 'release'
@@ -50,4 +49,3 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: Desktop-Cleanup-Uninstall.pkg
           tag: ${{ github.ref }}
-          file_glob: true
