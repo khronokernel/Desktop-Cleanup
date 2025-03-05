@@ -3,15 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 77;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		AE662AF12A58FAD900E930A8 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE662AF02A58FAD900E930A8 /* main.swift */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXCopyFilesBuildPhase section */
-		AE662AEB2A58FAD900E930A8 /* CopyFiles */ = {
+		AE6C242E2D38662200DBDF5C /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -23,12 +19,32 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		AE662AED2A58FAD900E930A8 /* Desktop-Cleanup */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Desktop-Cleanup"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AE662AF02A58FAD900E930A8 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		AE6C24302D38662200DBDF5C /* desktop-cleanup */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "desktop-cleanup"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AECEC1F92D386D1900943E24 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Package.swift; path = ../Package.swift; sourceTree = SOURCE_ROOT; };
+		AECEC1FA2D386D4500943E24 /* build.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; name = build.py; path = ../build.py; sourceTree = SOURCE_ROOT; };
+		AECEC1FB2D386D4500943E24 /* requirements.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = requirements.txt; path = ../requirements.txt; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		AE6C24322D38662200DBDF5C /* desktop-cleanup */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "desktop-cleanup";
+			sourceTree = "<group>";
+		};
+		AECEC1F12D386B9600943E24 /* install scripts */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "install scripts";
+			sourceTree = "<group>";
+		};
+		AECEC1F62D386C6200943E24 /* launch services */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "launch services";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
-		AE662AEA2A58FAD900E930A8 /* Frameworks */ = {
+		AE6C242D2D38662200DBDF5C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -38,96 +54,100 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AE662AE42A58FAD900E930A8 = {
+		AE6C24272D38662200DBDF5C = {
 			isa = PBXGroup;
 			children = (
-				AE662AEF2A58FAD900E930A8 /* Desktop-Cleanup */,
-				AE662AEE2A58FAD900E930A8 /* Products */,
+				AECEC1FA2D386D4500943E24 /* build.py */,
+				AECEC1FB2D386D4500943E24 /* requirements.txt */,
+				AECEC1F92D386D1900943E24 /* Package.swift */,
+				AECEC1F62D386C6200943E24 /* launch services */,
+				AECEC1F12D386B9600943E24 /* install scripts */,
+				AE6C24322D38662200DBDF5C /* desktop-cleanup */,
+				AE6C24312D38662200DBDF5C /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		AE662AEE2A58FAD900E930A8 /* Products */ = {
+		AE6C24312D38662200DBDF5C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AE662AED2A58FAD900E930A8 /* Desktop-Cleanup */,
+				AE6C24302D38662200DBDF5C /* desktop-cleanup */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		AE662AEF2A58FAD900E930A8 /* Desktop-Cleanup */ = {
-			isa = PBXGroup;
-			children = (
-				AE662AF02A58FAD900E930A8 /* main.swift */,
-			);
-			path = "Desktop-Cleanup";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AE662AEC2A58FAD900E930A8 /* Desktop-Cleanup */ = {
+		AE6C242F2D38662200DBDF5C /* desktop-cleanup */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AE662AF42A58FAD900E930A8 /* Build configuration list for PBXNativeTarget "Desktop-Cleanup" */;
+			buildConfigurationList = AE6C24372D38662200DBDF5C /* Build configuration list for PBXNativeTarget "desktop-cleanup" */;
 			buildPhases = (
-				AE662AE92A58FAD900E930A8 /* Sources */,
-				AE662AEA2A58FAD900E930A8 /* Frameworks */,
-				AE662AEB2A58FAD900E930A8 /* CopyFiles */,
+				AE6C242C2D38662200DBDF5C /* Sources */,
+				AE6C242D2D38662200DBDF5C /* Frameworks */,
+				AE6C242E2D38662200DBDF5C /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Desktop-Cleanup";
-			productName = "Desktop-Cleanup";
-			productReference = AE662AED2A58FAD900E930A8 /* Desktop-Cleanup */;
+			fileSystemSynchronizedGroups = (
+				AE6C24322D38662200DBDF5C /* desktop-cleanup */,
+				AECEC1F12D386B9600943E24 /* install scripts */,
+				AECEC1F62D386C6200943E24 /* launch services */,
+			);
+			name = "desktop-cleanup";
+			packageProductDependencies = (
+			);
+			productName = "desktop-cleanup";
+			productReference = AE6C24302D38662200DBDF5C /* desktop-cleanup */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		AE662AE52A58FAD900E930A8 /* Project object */ = {
+		AE6C24282D38662200DBDF5C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1500;
-				LastUpgradeCheck = 1500;
+				LastSwiftUpdateCheck = 1610;
+				LastUpgradeCheck = 1610;
 				TargetAttributes = {
-					AE662AEC2A58FAD900E930A8 = {
-						CreatedOnToolsVersion = 15.0;
+					AE6C242F2D38662200DBDF5C = {
+						CreatedOnToolsVersion = 16.1;
 					};
 				};
 			};
-			buildConfigurationList = AE662AE82A58FAD900E930A8 /* Build configuration list for PBXProject "Desktop-Cleanup" */;
-			compatibilityVersion = "Xcode 14.0";
+			buildConfigurationList = AE6C242B2D38662200DBDF5C /* Build configuration list for PBXProject "desktop-cleanup" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = AE662AE42A58FAD900E930A8;
-			productRefGroup = AE662AEE2A58FAD900E930A8 /* Products */;
+			mainGroup = AE6C24272D38662200DBDF5C;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = AE6C24312D38662200DBDF5C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AE662AEC2A58FAD900E930A8 /* Desktop-Cleanup */,
+				AE6C242F2D38662200DBDF5C /* desktop-cleanup */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		AE662AE92A58FAD900E930A8 /* Sources */ = {
+		AE6C242C2D38662200DBDF5C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE662AF12A58FAD900E930A8 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		AE662AF22A58FAD900E930A8 /* Debug */ = {
+		AE6C24352D38662200DBDF5C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -180,17 +200,17 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 15.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		AE662AF32A58FAD900E930A8 /* Release */ = {
+		AE6C24362D38662200DBDF5C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -237,7 +257,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 15.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -245,26 +265,24 @@
 			};
 			name = Release;
 		};
-		AE662AF52A58FAD900E930A8 /* Debug */ = {
+		AE6C24382D38662200DBDF5C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
-				ENABLE_HARDENED_RUNTIME = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
-		AE662AF62A58FAD900E930A8 /* Release */ = {
+		AE6C24392D38662200DBDF5C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
-				ENABLE_HARDENED_RUNTIME = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -272,25 +290,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AE662AE82A58FAD900E930A8 /* Build configuration list for PBXProject "Desktop-Cleanup" */ = {
+		AE6C242B2D38662200DBDF5C /* Build configuration list for PBXProject "desktop-cleanup" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AE662AF22A58FAD900E930A8 /* Debug */,
-				AE662AF32A58FAD900E930A8 /* Release */,
+				AE6C24352D38662200DBDF5C /* Debug */,
+				AE6C24362D38662200DBDF5C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AE662AF42A58FAD900E930A8 /* Build configuration list for PBXNativeTarget "Desktop-Cleanup" */ = {
+		AE6C24372D38662200DBDF5C /* Build configuration list for PBXNativeTarget "desktop-cleanup" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AE662AF52A58FAD900E930A8 /* Debug */,
-				AE662AF62A58FAD900E930A8 /* Release */,
+				AE6C24382D38662200DBDF5C /* Debug */,
+				AE6C24392D38662200DBDF5C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = AE662AE52A58FAD900E930A8 /* Project object */;
+	rootObject = AE6C24282D38662200DBDF5C /* Project object */;
 }

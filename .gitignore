@@ -1,2 +1,15 @@
-/build
+# General
 .DS_Store
+*.pyc
+.vscode
+*.pkg
+sign.sh
+*.zip
+
+# Xcode Settings
+xcuserdata/
+*.hmap
+*.dSYM.zip
+*.dSYM
+.build/
+build/
