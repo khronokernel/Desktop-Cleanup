@@ -31,6 +31,7 @@ class Cleanup {
         let screenshots = self.desktopFiles.filter { $0.contains("Screenshot") }
 
         if screenshots.count <= self.imagesToKeep {
+            print("Found \(screenshots.count) screenshots on the desktop. No cleanup needed.")
             return
         }
 
