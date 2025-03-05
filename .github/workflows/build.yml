@@ -16,9 +16,11 @@ jobs:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       # App Signing
+      ORG_MAC_DEVELOPER_ID_APPLICATION_IDENTITY: ${{ secrets.ORG_MAC_DEVELOPER_ID_APPLICATION_IDENTITY }}
       ORG_MAC_DEVELOPER_ID_APPLICATION_CERT_P12_BASE64: ${{ secrets.ORG_MAC_DEVELOPER_ID_APPLICATION_CERT_P12_BASE64 }}
       ORG_MAC_DEVELOPER_ID_APPLICATION_CERT_P12_PASSWORD: ${{ secrets.ORG_MAC_DEVELOPER_ID_APPLICATION_CERT_P12_PASSWORD }}
       # Installer Signing
+      ORG_MAC_DEVELOPER_ID_INSTALLER_IDENTITY: ${{ secrets.ORG_MAC_DEVELOPER_ID_INSTALLER_IDENTITY }}
       ORG_MAC_DEVELOPER_ID_INSTALLER_CERT_P12_BASE64: ${{ secrets.ORG_MAC_DEVELOPER_ID_INSTALLER_CERT_P12_BASE64 }}
       ORG_MAC_DEVELOPER_ID_INSTALLER_CERT_P12_PASSWORD: ${{ secrets.ORG_MAC_DEVELOPER_ID_INSTALLER_CERT_P12_PASSWORD }}
       # Notarization
@@ -55,6 +57,8 @@ jobs:
 
       - name: Build portable executable
         run: python3 build.py
+              --executable-signing-identity "${{ env.ORG_MAC_DEVELOPER_ID_APPLICATION_IDENTITY }}"
+              --pkg-signing-identity "${{ env.ORG_MAC_DEVELOPER_ID_INSTALLER_IDENTITY }}"
               --notarization-team-id "${{ env.ORG_MAC_NOTARIZATION_TEAM_ID }}"
               --notarization-apple-id "${{ env.ORG_MAC_NOTARIZATION_APPLE_ID }}"
               --notarization-password "${{ env.ORG_MAC_NOTARIZATION_PASSWORD }}"
