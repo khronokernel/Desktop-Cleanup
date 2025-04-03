@@ -1,5 +1,7 @@
 # Desktop Cleanup Changelog
 
+## 2.1.0
+
 ## 2.0.1
 - Resolve exception during screenshot removal
 
