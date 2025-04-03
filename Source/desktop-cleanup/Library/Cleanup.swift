@@ -60,7 +60,10 @@ class Cleanup {
 
         for (screenshot, _) in screenshotsToRemove {
             let screenshotPath = desktopPath.appendingPathComponent(screenshot)
-            let newScreenshotPath = oldScreenshotsFolder.appendingPathComponent(screenshot)
+
+            // Bug: Ensure file:// is prefixed to the path
+            // Ref: 'CFURLCopyResourcePropertyForKey failed because it was passed a URL which has no scheme'
+            let newScreenshotPath = URL(string: "file://\(oldScreenshotsURL)/\(screenshot)")!
 
             try! FileManager.default.moveItem(at: screenshotPath, to: newScreenshotPath)
             print("Index \(screenshot) moved to \(newScreenshotPath.path)")

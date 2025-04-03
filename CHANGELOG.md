@@ -1,5 +1,8 @@
 # Desktop Cleanup Changelog
 
+## 2.0.1
+- Resolve exception during screenshot removal
+
 ## 2.0.0
 - Rename executable to `desktop-cleanup`
   - Previously `Desktop-Cleanup`

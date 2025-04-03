@@ -6,7 +6,7 @@
 
 // Project
 let projectName       = "Desktop-Cleanup"
-let projectVersion    = "2.0.0"
+let projectVersion    = "2.0.1"
 
 // Default values
 let defaultImagesToKeep = 14
